@@ -8,127 +8,140 @@
     html, body {
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
       height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f0f0;
     }
 
-    header {
-      background-color: #003366;
-      color: white;
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      margin: 0;
-    }
-
-    nav button {
-      background: #0055aa;
-      border: none;
+      background-color: #2c3e50;
+      padding: 10px 20px;
       color: white;
-      padding: 0.5rem 1rem;
-      margin-left: 10px;
-      border-radius: 5px;
-      cursor: pointer;
     }
 
-    nav button:hover {
-      background: #007bff;
+    .navbar h1 {
+      margin: 0;
+      font-size: 1.5rem;
     }
 
-    .content {
-      height: calc(100vh - 70px);
-      width: 100%;
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
     }
 
-    .hidden {
-      display: none;
-    }
-
-    iframe.tableau-frame {
-      width: 100%;
-      height: 100%;
+    .nav-buttons button {
+      background-color: #3498db;
+      color: white;
       border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 0.9rem;
     }
 
-    .info-page {
-      padding: 2rem;
-      height: 100%;
-      overflow-y: auto;
-      background-color: white;
+    .nav-buttons button:hover {
+      background-color: #2980b9;
     }
 
-    /* Remove "View on Tableau Public" footer (overlay trick) */
-    .tableauPlaceholder iframe {
-      pointer-events: none;
+    .section {
+      display: none;
+      padding: 20px;
+      height: calc(100vh - 60px); /* navbar height compensation */
+      overflow: auto;
     }
 
-    .tableauPlaceholder::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
+    .section.active {
+      display: block;
+    }
+
+    .tableauPlaceholder {
       width: 100%;
-      height: 30px; /* approximate height of footer */
-      background: white;
-      z-index: 2;
+      height: 100%;
+    }
+
+    .tableauPlaceholder object {
+      width: 100%;
+      height: 100% !important;
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Sewa Setu Dashboard</h1>
-    <nav>
-      <button onclick="showPage('home')">Home</button>
-      <button onclick="showPage('faq')">FAQ</button>
-      <button onclick="showPage('feedback')">Feedback</button>
-    </nav>
-  </header>
-
-  <div id="home" class="content">
-    <iframe 
-      class="tableau-frame"
-      src="https://public.tableau.com/views/SewaSetu_App/DB01?:language=en-US&:embed=y&:display_count=yes&:showVizHome=no"
-      allowfullscreen
-    ></iframe>
-    <div style="text-align:center; padding:1rem;">
-      <button onclick="window.print()">Print or Save as PDF</button>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>Sewa Setu</h1>
+    <div class="nav-buttons">
+      <button onclick="showSection('home')">Home</button>
+      <button onclick="showSection('how')">How to Use</button>
+      <button onclick="showSection('feedback')">Feedbacks</button>
     </div>
   </div>
 
-  <div id="faq" class="content hidden info-page">
-    <h2>How to Use the Dashboard (For Departments)</h2>
+  <!-- Sections -->
+  <div id="home" class="section active">
+    <!-- Tableau Embed Code -->
+    <div class='tableauPlaceholder' id='sewaSetuDashboard'>
+      <noscript>
+        <a href="#">
+          <img alt='Sewa Setu Dashboard'
+            src='https://public.tableau.com/static/images/Se/SewaSetu_App/DB01/1_rss.png'
+            style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='SewaSetu_App/DB01' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image'
+          value='https://public.tableau.com/static/images/Se/SewaSetu_App/DB01/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+      </object>
+    </div>
+  </div>
+
+  <div id="how" class="section">
+    <h2>How to Use</h2>
+    <p>Welcome to the Sewa Setu Dashboard. Here's how you can use it:</p>
     <ul>
-      <li><strong>Filter by Department:</strong> Use the dropdown to focus only on your department's service data.</li>
-      <li><strong>Track Applications:</strong> View total applications, open, delivered, rejected, and overdue counts.</li>
-      <li><strong>Drill Down:</strong> Analyze performance by district, office, or service name.</li>
-      <li><strong>Timeliness:</strong> Monitor delivery and wait time performance trends.</li>
+      <li>Use filters inside the dashboard to drill into data by service, district, or department.</li>
+      <li>Hover over visuals to get detailed metrics.</li>
+      <li>Use the top-right buttons to navigate back to the dashboard, view help, or submit feedback.</li>
     </ul>
-    <p>If your data isn't loading, try refreshing the page or zooming out your browser view (Ctrl + -).</p>
   </div>
 
-  <div id="feedback" class="content hidden info-page">
-    <h2>Feedback</h2>
-    <iframe 
-    src="https://docs.google.com/forms/d/e/1FAIpQLScxC8l-JwZzApXZ-bqMe5TNQtvxC5kvB_U1AmUy4PPkXvPxSg/viewform?embedded=true" 
-    width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">
-    Loading…
-  </iframe>
+  <div id="feedback" class="section">
+    <h2>Submit Your Feedback</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScxC8l-JwZzApXZ-bqMe5TNQtvxC5kvB_U1AmUy4PPkXvPxSg/viewform?embedded=true" height="1100">
+      Loading…
+    </iframe>
   </div>
 
+  <!-- JS: Switch Sections & Load Tableau Script -->
   <script>
-    function showPage(pageId) {
-      document.getElementById('home').classList.add('hidden');
-      document.getElementById('faq').classList.add('hidden');
-      document.getElementById('feedback').classList.add('hidden');
-      document.getElementById(pageId).classList.remove('hidden');
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
     }
+
+    // Load Tableau script
+    const tableauScript = document.createElement('script');
+    tableauScript.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    document.body.appendChild(tableauScript);
   </script>
 
 </body>
