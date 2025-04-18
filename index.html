@@ -117,7 +117,166 @@
   <!-- How_To_Use: Instructional Guide -->
   <div id="how" class="section">
 
-
+    <div style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 1200px; margin: auto; padding: 20px; background: #fdfdfd; border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+      <h2 style="font-size: 1.5em; color: #2c3e50;">🔍 Sewa Setu Service Delivery Dashboard Instructional Guide (2021-10 to 2025-03)</h2>
+    
+      <h3>🧾 1. Summary KPIs (Top Row)</h3>
+      <p>This section provides high-level performance indicators:</p>
+      <ul>
+        <li><strong># Applications</strong> – Total number of applications received through Sewa Setu (17.5 million).</li>
+        <li><strong># Delivered</strong> – Successfully delivered services (886,162).</li>
+        <li><strong># Rejected</strong> – Applications that were rejected (289,171).</li>
+        <li><strong># Returned</strong> – Applications returned for correction or additional input (74,841).</li>
+        <li><strong># Open</strong> – Applications currently pending (170,051).</li>
+        <li><strong># Overdue</strong> – Applications open beyond their SLA/due date (114,406).</li>
+      </ul>
+    
+      <h3>📂 2. Filters (Below KPIs)</h3>
+      <p>These dropdowns allow users to slice and dice data:</p>
+      <ul>
+        <li>Department / Service</li>
+        <li>Is RTPS Service?</li>
+        <li>Integration Type</li>
+        <li>Source Application</li>
+        <li>Mode of Application</li>
+        <li>Date Range (From / To)</li>
+      </ul>
+      <p><strong>Use these filters to analyze trends or problems at a granular level.</strong></p>
+    
+      <h3>🏢 3. Department Overview</h3>
+      <p>Shows the number of applications per department:</p>
+      <ul>
+        <li><strong>#Svc(Txn)</strong> – Number of services provided by the department.</li>
+        <li><strong>#Appln</strong> – Total applications received.</li>
+        <li><strong>% of Appln</strong> – Contribution to total applications.</li>
+        <li><strong>#Open</strong> – Current pending applications.</li>
+        <li><strong>#Overdue</strong> – Open applications that have crossed SLA/due dates.</li>
+      </ul>
+      <p>🔎 Useful to identify high-load or underperforming departments.</p>
+    
+      <h3>🧾 4. Service Overview</h3>
+      <p>Similar to the Department Overview, but at the service level:</p>
+      <ul>
+        <li><strong>service_name</strong> – Name of the individual service.</li>
+        <li><strong>#Appln</strong> – Applications received for that service.</li>
+        <li><strong>#Open</strong> – Currently open.</li>
+        <li><strong>#Overdue</strong> – Overdue applications.</li>
+      </ul>
+      <p>👉 Shows the services contributing to the most applications or delays (e.g., e-Khajana or Jamabandi copies).</p>
+    
+      <h3>🕒 5. Service Delivery Speed (Past Performance)</h3>
+      <p>Bar graph showing past performance of delivery times:</p>
+      <ul>
+        <li><strong>A</strong> – Under 10 Days: 71.7%</li>
+        <li><strong>B–F</strong> – Longer durations, visualized in descending performance</li>
+      </ul>
+      <p>⚠️ Helps identify delays or inefficiencies.</p>
+    
+      <h3>📊 6. Trend of Application Receipts</h3>
+      <p>Bar graph showing the monthly trend of application submissions:</p>
+      <ul>
+        <li>Peaks in specific months (e.g., early 2023)</li>
+        <li>Average line helps benchmark fluctuations</li>
+      </ul>
+      <p>🎯 Use this to prepare for seasonal surges.</p>
+    
+      <h3>🕒 7. Current Pendency of Open Applications</h3>
+      <p>Shows breakdown of currently open applications by aging:</p>
+      <ul>
+        <li>A: &lt; 10 Days – 4.8%</li>
+        <li>F: &gt; 1 Year – 27.6%</li>
+        <li>🔥 Major bottleneck areas: 23.5% pending for 31–90 days, and 39.5% over 91 days (RED zones).</li>
+      </ul>
+    
+      <h3>🌍 8. District Overview</h3>
+      <p>Shows geographic breakdown:</p>
+      <ul>
+        <li><strong>#Open</strong> – Total pending in the district.</li>
+        <li><strong>#Overdue</strong> – Pending beyond SLA.</li>
+        <li><strong>% Overdue</strong> – Portion of overdue applications in the district.</li>
+      </ul>
+      <p>🔍 Identify poorly performing districts (e.g., Dhubri, Kamrup, Dibrugarh).</p>
+    
+      <h3>🏢 9. Office Overview</h3>
+      <p>Drills further into specific offices:</p>
+      <ul>
+        <li>Subdistrict offices or departments</li>
+        <li>Number of open and overdue applications</li>
+      </ul>
+      <p>📌 Helps track local office performance for targeted improvements.</p>
+    
+      <h3>✅ Actionable Use Cases</h3>
+      <ul>
+        <li>📍 <strong>Department-level accountability</strong>: Target departments with high overdue rates.</li>
+        <li>📍 <strong>Service improvement</strong>: Re-engineer services like e-Khajana with &gt;25,000 overdue cases.</li>
+        <li>📍 <strong>District administration alerts</strong>: Prioritize Dhubri, Kamrup, and Bongaigaon for process revamps.</li>
+        <li>📍 <strong>Citizen SLA improvements</strong>: Monitor and improve applications pending over 90 days.</li>
+      </ul>
+    
+      <hr style="margin: 40px 0;">
+    
+      <h2 style="color: #2c3e50;">📘 Sample Explanation for: Revenue & Disaster Management Department</h2>
+    
+      <h3>🔍 Dashboard Overview (2021-10 to 2025-03)</h3>
+      <p>This dashboard tracks the service delivery performance of the <strong>Revenue & Disaster Management Department</strong> under the Sewa Setu portal for the selected timeframe.</p>
+    
+      <h3>🧩 Key Metrics</h3>
+      <ul>
+        <li><strong># Applications</strong>: 7,690,152</li>
+        <li><strong># Delivered</strong>: 465,593</li>
+        <li><strong># Rejected</strong>: 231,331</li>
+        <li><strong># Returned</strong>: 21,641</li>
+        <li><strong># Open</strong>: 138,812</li>
+        <li><strong># Overdue</strong>: 88,976</li>
+      </ul>
+    
+      <h3>🏢 Department Overview</h3>
+      <p>42 services contributed 7.69 million applications. 138K still pending, and nearly 89K overdue. Full focus is on this department due to the filter applied.</p>
+    
+      <h3>📋 Top Services with High Volume or Delay</h3>
+      <ul>
+        <li>📄 <strong>Settlement of Khas and Ceiling Surplus Land</strong>: 1.4M applications, 18.9K open.</li>
+        <li>📄 <strong>Certified Copy of Jamabandi</strong>: 1M+, 7K overdue.</li>
+        <li>📄 <strong>e-Khajana</strong>: 960K received, 25K overdue — <strong>highest concern</strong>.</li>
+      </ul>
+    
+      <h3>⏱️ Delivery Speed</h3>
+      <ul>
+        <li><strong>59.6%</strong> of services delivered within 10 days.</li>
+        <li>~14% took more than 3 months (E+F).</li>
+      </ul>
+    
+      <h3>📈 Application Trend</h3>
+      <p>Peak: Feb–Mar 2023 with 900K+ applications/month. Decline and stabilization below average in recent months.</p>
+    
+      <h3>📊 Pendency Analysis</h3>
+      <ul>
+        <li>31.1% pending: 31–90 days</li>
+        <li>42.1% pending: 91–365 days</li>
+        <li>16.3% pending: >1 year</li>
+        <li><strong>⚠️ 58.4% applications pending >3 months</strong></li>
+      </ul>
+    
+      <h3>🌍 District View</h3>
+      <ul>
+        <li><strong>Dhubri</strong>: 11.4K open, 8.1K overdue</li>
+        <li><strong>Kamrup, Dibrugarh</strong> also high volume</li>
+      </ul>
+    
+      <h3>🏢 Office View</h3>
+      <ul>
+        <li><strong>Circle Office Dispur</strong>: 2,761 open, 100% overdue</li>
+        <li><strong>HQ</strong>: Almost all 2,781 applications overdue</li>
+      </ul>
+    
+      <h3>✅ Recommendations</h3>
+      <ul>
+        <li><strong>Target e-Khajana</strong> for rapid clearance</li>
+        <li><strong>Focus on Dispur, Tezpur, Srijangram offices</strong></li>
+        <li><strong>District escalation</strong>: Dhubri and Kamrup</li>
+        <li><strong>Use proactive alerts or automation</strong> to avoid >90 day pendency</li>
+      </ul>
+    </div>
     
   </div>
 <!--xxx How_To_Use: Instructional Guide xxx -->
