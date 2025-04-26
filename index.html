@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.6"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>Sewa Setu Dashboard</title>
@@ -87,54 +87,55 @@
   </div>
 
   <!-- Sections -->
-  
     <!-- Tableau Embed Code Here -->
-    <div id="home" class="section active" style="width: 100%; text-align: center; background: #fff; padding-top: 20px;">
-      <div style="max-width: 1600px; margin: auto;">
-        <div class='tableauPlaceholder' id='viz1745662549425' style='position: relative;'>
-          <noscript>
-            <a href='#'>
-              <img alt='DB_SewaSetu'
-                src='https://public.tableau.com/static/images/Se/SewaSetu_App/DB_SewaSetu/1_rss.png'
-                style='border: none;' />
-            </a>
-          </noscript>
-          <object class='tableauViz' style='width: 100%; height: 2300px; display: none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='SewaSetu_App/DB_SewaSetu' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/Se/SewaSetu_App/DB_SewaSetu/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-          </object>
-        </div>
+    <div id="home" class="section active" style="width: 100%; text-align: center; background: #fff; padding: 0; margin: 0;">
+
+      <div id="tableau-container" style="width: 100%; height: 100%;">
+        <!-- Tableau Viz will be inserted dynamically here -->
       </div>
     
-      <script type='text/javascript'>
-        var divElement = document.getElementById('viz1745662549425');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        if (divElement.offsetWidth > 1200) {
-          vizElement.style.width = '100%';
-          vizElement.style.height = '2300px';
-        } else if (divElement.offsetWidth > 768) {
-          vizElement.style.width = '100%';
-          vizElement.style.height = '2500px';
-        } else {
-          vizElement.style.width = '100%';
-          vizElement.style.height = '2800px';
+      <script type="text/javascript">
+        function loadTableauViz() {
+          var container = document.getElementById('tableau-container');
+          container.innerHTML = `
+            <div class="tableauPlaceholder" id="viz1745662549425" style="width: 100%; height: 100vh; position: relative;">
+              <noscript>
+                <a href='#'>
+                  <img alt='DB_SewaSetu'
+                    src='https://public.tableau.com/static/images/Se/SewaSetu_App/DB_SewaSetu/1_rss.png'
+                    style='border: none;' />
+                </a>
+              </noscript>
+              <object class="tableauViz" style="width: 100%; height: 100%;">
+                <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                <param name="embed_code_version" value="3" />
+                <param name="site_root" value="" />
+                <param name="name" value="SewaSetu_App/DB_SewaSetu" />
+                <param name="tabs" value="no" />
+                <param name="toolbar" value="yes" />
+                <param name="static_image"
+                  value="https://public.tableau.com/static/images/Se/SewaSetu_App/DB_SewaSetu/1.png" />
+                <param name="animate_transition" value="yes" />
+                <param name="display_static_image" value="yes" />
+                <param name="display_spinner" value="yes" />
+                <param name="display_overlay" value="yes" />
+                <param name="display_count" value="yes" />
+                <param name="language" value="en-US" />
+              </object>
+            </div>
+          `;
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          document.body.appendChild(scriptElement);
         }
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    
+        // Load Tableau only initially
+        loadTableauViz();
       </script>
+    
     </div>
+    
+     
     <!-- Tableau Embed Code Ends Here -->
   
 
@@ -298,6 +299,11 @@
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+
+      if (id === 'home') {
+        // Reload tableau dashboard when coming back to home
+        loadTableauViz();
+      }
     }
 
     // Load Tableau script
