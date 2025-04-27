@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Sewa Setu Dashboard</title>
+  <title>Sewa Setu Service Delivery Performance Dashboard</title>
   <style>
     html, body {
       margin: 0;
@@ -78,7 +78,7 @@
 
   <!-- Navbar -->
   <div class="navbar">
-    <h1>Sewa Setu Dashboard</h1>
+    <h1>Sewa Setu Service Delivery Performance Dashboard</h1>
     <div class="nav-buttons">
       <button onclick="showSection('home')">Home</button>
       <button onclick="showSection('how')">How to Use</button>
@@ -145,161 +145,155 @@
   <!-- Home Section Ends Here -->
 
   <!-- How To Use Section Starts -->
-  <div id="how" class="section">
     
-    <div style="font-family: Arial, sans-serif; font-size: 1.5rem; line-height: 1.6; max-width: 100%; margin: auto; padding: 20px; background: #fdfdfd; border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
-      <h2 style="color: #0d6efd;">🔍 Objective</h2>
-      <p>This manual is designed to assist departmental users in viewing and analyzing service delivery performance reports for their own department using the Sewa Setu Dashboard.</p>
+    <div id="how" class="section" style="font-family: Arial, sans-serif; font-size: 1.1rem; line-height: 1.6; max-width: 1200px; margin: auto; padding: 30px; background: #fdfdfd; border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
 
-      <div style="margin-top: 2rem; padding: 15px; background: #e9f7fe; border-left: 5px solid #0dcaf0; border-radius: 8px;">
-        <h3 style="color: #0d6efd;">ℹ️ Please Note</h3>
-        <p style="font-size: 1rem;">
-          You can view the Sewa Setu Service Dashboard in full screen mode for a better experience.<br><br>
-          👉 To activate Full Screen Mode, click on the <strong>"See this in full screen"</strong> button located at the bottom right corner of the dashboard 
-          <img src="images/Picture12.png" alt="Activate Full Screen Mode" style="display: block; margin: 10px 0; max-width: 50%; max-height: 50%; border: 1px solid #ccc; border-radius: 8px;" /><br>
-          👉 To exit Full Screen Mode, simply click on the <strong>"Exit Full screen"</strong> button.
-          <img src="images/Picture13.png" alt="Exit Full Screen Mode" style="display: block; margin: 10px 0; max-width: 50%; max-height: 50%; border: 1px solid #ccc; border-radius: 8px;" />
-        </p>
-      </div>
-
-      <h2 style="color: #198754;">🖥️ Step-by-Step Instructions</h2>
-      <h3>1. Access the Dashboard</h3>
-      <ul>
-        <li>Open your web browser.</li>
-        <li>Click the Dashboard URL: <strong><a href="#">Sewa Setu Dashboard</a></strong></li>
-        <li>It will redirect to the Sewa Setu Dashboard, which displays an overview of Sewa Setu Service Delivery.</li>
-        <img src="images/Picture1.png" alt="Sewa Setu Dashboard Overview" style="max-width: 120%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-
-      </ul>
-    
-      <h3>2. Summary KPIs (Top Rows)</h3>
-      <img src="images/Picture2.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <p>This section provides high-level performance indicators:</p>
-      <ul>
-        <li># Applications – Total applications received through Sewa Setu (17.5 million).</li>
-        <li># Delivered – Successfully delivered services (886,162).</li>
-        <li># Rejected – Applications that were rejected (289,171).</li>
-        <li># Returned – Applications returned for correction or additional input (74,841).</li>
-        <li># Open – Applications currently pending (170,051).</li>
-        <li># Overdue – Applications open beyond their SLA/due date (114,406).</li>
-      </ul>
-    
-      <h3>3. Filters (Below KPIs)</h3>
-      <img src="images/Picture3.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <p>These dropdowns allow users to slice and dice data:</p>
-    
-      <ul>
-        <li><strong>Select Your Department:</strong> Use the 'Department' dropdown to select your department (e.g., Revenue & DM).</li>
-        <li><strong>Choose the Service:</strong> Use the 'Service' dropdown to analyze specific services (e.g., Mutation by Inheritance).</li>
-        <li><strong>Apply Detailed Filters:</strong>
+      <!-- <div id="how" class="section" style="display: none; font-family: Arial, sans-serif;"> -->
+        <div style="max-width: 900px; margin: auto; padding: 20px; background: #fff;">
+          <h1 style="text-align: center; color: #2c3e50; font-size: 2rem;">Sewa Setu Service Delivery Performance Dashboard</h1>
+      
+          <h2 style="text-align: center; color: #2c3e50;">Dashboard Overview</h2>
+      
+          <p style="text-align: justify;">
+            The <strong>Sewa Setu Service Delivery Performance Dashboard</strong> provides comprehensive insights into online service delivery across various departments via the Sewa Setu platform. This interactive dashboard enables departmental users and senior stakeholders to track, assess, and manage the timeliness and efficiency of public service delivery.
+          </p>
+      
+          <div style="text-align: center;">
+            <img src="images_new/Picture1.png" alt="Dashboard Overview" style="max-width: 100%; margin-top: 20px; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+      
+          <h2 style="text-align: center; color: #2c3e50; margin-top: 40px;">Dashboard Components</h2>
+      
+          <p style="text-align: justify;">
+            The dashboard is organized into the following key sections:
+          </p>
+      
+          <h3 style="color: #2c3e50;">1. <strong>Key Metrics:</strong></h3>
+          <p style="text-align: justify;">At the top of the dashboard, users can quickly view high-level statistics:</p>
+          <div style="text-align: center;">
+            <img src="images_new/Picture2.png" alt="Key Metrics" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
           <ul>
-            <li>Is RTPS Service</li>
-            <li>Integration Type</li>
-            <li>Source Application</li>
-            <li>Mode of Application</li>
-            <li>Date Range (From Month-Year / To Month-Year)</li>
+            <li>Total Applications received: Based on the filter conditions applied.</li>
+            <li>Total Delivered: Cases where service has been delivered.</li>
+            <li>Total Rejected: Cases rejected.</li>
+            <li>Total Returned: Cases returned back to the applicant.</li>
+            <li>Currently Open applications: Cases where processing is ongoing as on date.</li>
+            <li>Applications Overdue: Cases where the time since request for application has exceeded the timeline committed for the service, be it RTPS, or not.</li>
           </ul>
-        </li>
-      </ul>
+      
+          <h3 style="color: #2c3e50;">2. <strong>Filters for Analysis:</strong></h3>
+          <p style="text-align: justify;">While the Dashboard itself is interactive, there are a few high level filters Interactive filters that can be applied to focus on the services of interest:</p>
+          <div style="text-align: center;">
+            <img src="images_new/Picture3.png" alt="Filters for Analysis" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+          <ul>
+            <li><strong>RTPS Notified:</strong> Filter applications notified under the Right to Public Services Act.</li>
+            <li><strong>Service Category:</strong> Enables filtering for services based on their intended beneficiaries/categories: Business, Citizens, Schemes, Utility.</li>
+            <li><strong>o	Select Month (From and To):</strong>Define a time range for viewing the status of only those services that were applied for in that time period.</li>
+          </ul>
+      
+          <h3 style="color: #2c3e50;">3. <strong>Department-wise Performance Table:</strong></h3>
+          <p style="text-align: justify;">This section provides an overview of Service delivery performance by department, with information on the number of Services being delivered through Sewa Setu, the number of applications, the percentage share of the applications, and the count of Open and overdue cases.  One or more Departments can be selected using the drop-box, or by clicking on the name of the Department to focus on their performance.</p>
+          <div style="text-align: center;">
+            <img src="images_new/Picture4.png" alt="Department-wise Performance" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+      
+          <h3 style="color: #2c3e50;">4. <strong>Service-wise Performance Table:</strong></h3>
+          <p style="text-align: justify;">This shows similar summary information as shown in case of Departments, allowing ranking and sorting of the Services by any of the numbers, viz Number of applications, Number Open, and Number Overdue. Additionally, if a Department had been selected earlier, one can focus on the services being rendered by that Department alone.</p>
+          <div style="text-align: center;">
+            <img src="images_new/Picture5.png" alt="Service-wise Performance" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+      
+          
+          <div style="text-align: justify;"><strong>5. </strong>The above sections provide both a summary, and an option to Filter and focus on the performance of the selected Department and/or Service for a particular period. Subsequent section shows other data relating to the performance.</div>
+          
+
+          <h3 style="color: #2c3e50;">6. <strong>Service Delivery Speed (Past Performance):</strong></h3>
+          <p style="text-align: justify;">This enables a quick assessment of what has been the historical performance of the selected service(s) in terms of the time taken in delivering services. This considers only those cases where the services were actually delivered (excludes returned/rejected/open cases)</p>
+          <div style="text-align: center;">
+            <img src="images_new/Picture6.png" alt="Service Delivery Speed" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+      
+          <h3 style="color: #2c3e50;">7. <strong>Current Pendency of Open Applications:</strong></h3>
+          <p style="text-align: justify;">While the past performance is seen in the previous visualisation focusing on historical, the current pendency visualisation enables in understanding what the extent of Pendency is, and how delayed are the cases. This is especially crucially for RTPS services where strict timelines have been committed by the Government, and enforceable through the RTPS Act.</p>
+          <div style="text-align: center;">
+            <img src="images_new/Picture7.png" alt="Current Pendency" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+      
+          <h3 style="color: #2c3e50;">8. <strong>Trend of Application Receipts:</strong></h3>
+          <p style="text-align: justify;">The chart shows the monthly trends of application receipt. This helps in identifying peak periods, seasonal trends, and a possible explanation for the current status of pendency.</p>
+          <div style="text-align: center;">
+            <img src="images_new/Picture8.png" alt="Application Receipts Trend" style="max-width: 100%; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
+          </div>
+
+          <h3 style="color: #2c3e50;">9. <strong>Districts & Offices Performance:</strong></h3>
+          <p style="text-align: justify;">The District and Office level performance Tabulations summarises open and overdue applications at district and office level. This facilitates localized performance management and identifying Geographical location / offices that need attention to meet the performance targets.</p>
+
+          <h2 style="text-align: center; color: #2c3e50; margin-top: 40px;">How to Use the Dashboard</h2>
+
+          <p style="text-align: justify;">10. The following is one possible approach for using the Dashboard, though users may evolve their own method as per their area of interest:</p>
+          <ul>
+            <li><strong>General Navigation:</strong>
+              <ol>
+                <li>Begin with high-level metrics for an overview.</li>
+                <li>Utilize filters to pinpoint data relevant to specific departments, services, or timeframes.</li>
+              </ol>
+            </li>
+            <li><strong>Analysing Department and Service Performance:</strong>
+              <ol>
+                <li>Select the desired department or service to evaluate their performance specifically.</li>
+                <li>Identify departments/services with high overdue application rates to prioritize interventions.</li>
+              </ol>
+            </li>
+            <li><strong>Monitoring Service Delivery Speed:</strong>
+              <ol>
+                <li>Analyse historical speed to identify patterns or delays in service delivery.</li>
+                <li>Implement corrective actions in departments with slower service delivery.</li>
+              </ol>
+            </li>
+            <li><strong>Pendency Analysis:</strong>
+              <ol>
+                <li>Quickly visualize current backlogs and aging applications.</li>
+                <li>Address urgent backlogs (highlighted clearly in red/yellow).</li>
+                <li>In case of Services which are only Integrated to Sewa Setu (with Service Delivery through dedicated application, such as Vahan-Sarthi or Basundhara) where the pendency pattern differs from the historical performance or internal reports, check if the status is correctly being transferred to Sewa Setu.</li>
+              </ol>
+            </li>
+            <li><strong>Trend Analysis:</strong>
+              <ol>
+                <li>Observe monthly application trends to anticipate resource requirements, and to understand current pendency.</li>
+                <li>Allocate resources efficiently based on identified demand peaks.</li>
+              </ol>
+            </li>
+          </ul>
+          
+          <h3 style="color: #2c3e50;">11. <strong>Intended Users:</strong></h3>
+          <ul>
+            <li><strong>Senior Stakeholders and Decision Makers:</strong> To oversee departmental efficiency, ensure accountability, and support strategic decision-making for enhanced public service delivery.</li>
+            <li><strong>Officers/Institutions responsible for RTPS Compliance:</strong> To enable monitoring of compliance with the Service delivery commitments given in the RTPS Act.</li>
+            <li><strong>Departmental Staff:</strong> To monitor service performance, manage application processing times, and address backlogs proactively.</li>
+          </ul>
+          <p>
+            This dashboard facilitates an informed, responsive, and accountable governance structure, significantly enhancing the effectiveness of public service delivery through Sewa Setu.
+          </p>
+          
+          <h2 style="text-align: center; color: #2c3e50; margin-top: 40px;">Known Issues</h2>
+          <div style="color: #2c3e50;">
+            <p><strong>12.</strong> 12.	The dashboard is only as good as the data that it surfaces. The present version is based on data currently available on the Sewa Setup portal at the end of March 2025. The data would be updated on a monthly basis by the first of the next month for timely monitoring by the stakeholders. Most of the services brought under the Sewa Setu portal to fulfil the vision of providing a Single Platform to the Citizens for all Government Services - “One Government, One Platform, Every Service” are provided through the dedicated application of the Departments, such as Basundhara or Vahan-Sarthi. Sewa Setu only serves as a bridge – not a destination, and hence it is essential that the link between Sewa Setu and the native applications are reliable and complete.</p>
+          
+            <p><strong>13.</strong> 13.	The partial integration between Sewa Setu and the Service delivery applications cause data quality issues impact both accuracy and completeness. It is known that many of the links do not function correctly – such as that of Transport Department’s Vahan-Sarthi applications, leading to inaccurate display on the Dashboard. Some links are non-existent, such as the large number of services which are configured in the re-directional mode, where Sewa Setu only points the user to the relevant service, but is unable to track the status of processing of the application. There are also services where citizen’s apply both on Sewa Setu, and the native application, such as eDistrict, and where the service delivery status does not flow back to Sewa Setu.</p>
+          
+            <p><strong>14.</strong> 14.	Over the next few months, the IT Department would work with service providing Departments to ensure that the link between Sewa Setup and the native application is made accurate and reliable.  The Dashboard would also undergo improvements, based on the feedback received, to make it a single interface for monitoring all aspects of Service Delivery and compliance with the RTPS Act.</p>
+          </div>
+          
+          
+
+        </div>
+      <!-- </div> -->
+         
     
-      <h3>4. Department Overview</h3>
-      <p>Shows number of services and applications handled by your department, along with open and overdue cases. Helps identify backlog and performance issues.</p>
-    
-      <h3>5. Service Delivery Pendency of Open Applications</h3>
-      <p>Visual breakdown by how long applications have been pending:</p>
-      <ul>
-        <li>A: Less than 10 Days</li>
-        <li>B: 11–20 Days</li>
-        <li>C: 21–30 Days</li>
-        <li>D: 31–90 Days</li>
-        <li>E: 91–365 Days</li>
-        <li>F: More than 1 Year</li>
-      </ul>
-    
-      <h3>6. Application Receipts Trend</h3>
-      <p>Bar graph showing monthly application trends to help plan workloads.</p>
-    
-      <h3>7. District & Office-Level Overview</h3>
-      <p>Shows district- and office-wise performance to identify low-performing regions or teams.</p>
-    
-      <h3>8. Pendency Analysis</h3>
-      <p>Highlights how long current cases have been pending, with red/yellow flags for long delays.</p>
-    
-      <h2 style="color: #6f42c1;">📁 Tips for Analysis and Action</h2>
-      <ul>
-        <li>✅ Use filters to isolate applications pending more than 90 days.</li>
-        <li>✅ Drill down by district or office to locate bottlenecks.</li>
-        <li>✅ Use trend charts for forecasting and planning interventions.</li>
-        <li>✅ Export reports for review meetings (if download enabled).</li>
-      </ul>
-    
-      <h2 style="color: #dc3545;">🛠 Feedback</h2>
-      <p>To raise queries or provide suggestions:</p>
-      <ul>
-        <li>Click the <strong>“Feedback”</strong> tab in the dashboard menu.</li>
-        <li>Fill the form and submit your concern.</li>
-      </ul>
-    
-      <hr style="margin: 2rem 0;">
-    
-      <h2 style="color: #2c3e50;">📘 Dashboard Explanation Using Section-wise Sample</h2>
-      <h3>🔍 Dashboard Overview – Revenue & Disaster Management Department (Sample)</h3>
-      <img src="images/Picture4.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <p>This view shows the performance of Revenue & DM Dept. under the Sewa Setu portal.</p>
-    
-      <ul>
-        <li># Applications: 7,690,152</li>
-        <li># Delivered: 465,593</li>
-        <li># Rejected: 231,331</li>
-        <li># Returned: 21,641</li>
-        <li># Open: 138,812</li>
-        <li># Overdue: 88,976</li>
-      </ul>
-    
-      <h3>🏢 Department Overview – Labour and Welfare Dept. (Sample)</h3>
-      <img src="images/Picture5.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <p>30 services contributed 2.22 lakh applications. 91 pending, 59 overdue.</p>
-    
-      <h3>📋 Service Overview (Sample)</h3>
-      <img src="images/Picture6.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <p>📄 <strong>Settlement of Khas and Ceiling Surplus Land:</strong> 1.4M applications, 18.9K open.</p>
-    
-      <h3>⏱️ Service Delivery Speed (Sample)</h3>
-      <img src="images/Picture7.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <ul>
-        <li>93% delivered within 10 days</li>
-        <li>2.2% took over 2 months</li>
-      </ul>
-    
-      <h3>📈 Application Receipts Trend (Sample)</h3>
-      <img src="images/Picture8.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <p>Peak: Feb–Mar 2023 (~5K/month); now stabilizing below average.</p>
-    
-      <h3>📊 Pendency Analysis (Sample)</h3>
-      <img src="images/Picture9.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <ul>
-        <li>15.2% pending under 10 days</li>
-        <li>34.8% pending between 1–3 months</li>
-      </ul>
-    
-      <h3>🌍 District View (Sample)</h3>
-      <img src="images/Picture10.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <ul>
-        <li>Cachar: 10 open, 10.71% overdue</li>
-        <li>Kamrup: 23 open, 28.81% overdue</li>
-        <li>Total: 91 open, 100% overdue</li>
-      </ul>
-    
-      <h3>🏢 Office View (Sample)</h3>
-      <img src="images/Picture11.png" alt="Sewa Setu Dashboard Overview" style="max-width: 100%; margin-top: 15px; border: 1px solid #ccc; border-radius: 8px;" />
-      <ul>
-        <li>Section Office, Dispur: 23 open, 17 overdue</li>
-        <li>Section Office, Cachar: 10 open, 6 overdue</li>
-        <li>Total: 91 open, 59 overdue</li>
-      </ul>
-    </div>
-    
-  </div>
+    </div>    
+
   <!-- How To Use Section Ends -->
   <!-- Sections feedback -->
   <div id="feedback" class="section">
